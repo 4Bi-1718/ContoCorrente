@@ -18,7 +18,9 @@ public class TUI {
     }
 
     public void presentaMenu() {
-
+        System.out.println("1 - visualizza la lista");
+        System.out.println("2 - aggiungi operazione");
+        System.out.println("0 - chiudi il programma");
     }
 
     public int inputScelta() {
