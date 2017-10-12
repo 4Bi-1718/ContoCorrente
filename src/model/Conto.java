@@ -10,13 +10,13 @@ package model;
  * @author Docente
  */
 public class Conto {
+
     private ContoFile cf;
     private Operazione[] dati;
 
     public Conto() {
-        cf=new ContoFile();
-        dati=cf.leggiDati();
+        cf = new ContoFile();
+        dati = cf.leggiDati();
     }
-    
-    
+
 }

@@ -10,15 +10,16 @@ package view;
  * @author Docente
  */
 public class TUI {
-    public void scriviTitolo(){
+
+    public void scriviTitolo() {
         System.out.println("Gestione di conto corrente");
     }
- //ciap
-    public void presentaMenu(){
-        
+
+    public void presentaMenu() {
+
     }
-    
-    public int inputScelta(){
+
+    public int inputScelta() {
         return 0;
     }
 }

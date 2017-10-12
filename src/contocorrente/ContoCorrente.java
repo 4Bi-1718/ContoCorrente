@@ -15,5 +15,5 @@ public class ContoCorrente {
         Applicazione app = new Applicazione();
         app.run();
     }
-    
+
 }

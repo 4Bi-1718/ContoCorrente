@@ -10,6 +10,7 @@ package model;
  * @author Docente
  */
 public class Operazione {
+
     private String data;
     private double importo;
     private String causale;
@@ -43,5 +44,5 @@ public class Operazione {
     public void setCausale(String causale) {
         this.causale = causale;
     }
-    
+
 }
