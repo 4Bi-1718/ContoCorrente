@@ -42,5 +42,41 @@ public class TUI {
     
     public void ordSeparatore(){
         System.out.println("-----------------"); //metodo che stampa separatore
-    }                                            
+    }
+    
+    /**
+     * Metodo per l'inserimento e la restituzione della data
+     * @return data
+     */
+    public String inputData(){
+        Scanner lettore=new Scanner(System.in);
+        String data;
+        System.out.print("inserisci la data: (GG/MM/AAAA) ");
+        data=lettore.nextLine();        
+        return data;
+    }
+    
+    /**
+     * Metodo per l'inserimento e la restituzione dell'importo
+     * @return importo
+     */
+    public double inputImporto(){
+        Scanner lettore= new Scanner(System.in);
+        double importo;
+        System.out.print("inserisci importo: ");
+        importo=lettore.nextDouble();
+        return importo;
+    }
+    
+    /**
+     * Metodo per l'inserimento e la restituzione della causale
+     * @return causale
+     */
+    public String inputCausale(){
+        Scanner lettore=new Scanner(System.in);
+        String causale;
+        System.out.print("inserisci causale: ");
+        causale=lettore.nextLine();
+        return causale;
+    }
 }
