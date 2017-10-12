@@ -31,6 +31,17 @@ public class Conto {
         //assegno il nuovo array a dati
         dati = dati2;
         cf.scriviDati(dati);
+        }
+    
+    public double saldo(){
+        double saldo=0;
+        
+        for (int i = 0; i < dati.length; i++) {
+            //somma algebrica tra il saldo e l'importo dell'elemento nella posizione i di dati[]
+            saldo=saldo+dati[i].getImporto();
+        }
+        
+        return saldo;
     }
 
 }
