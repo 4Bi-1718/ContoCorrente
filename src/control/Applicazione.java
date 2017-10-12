@@ -62,6 +62,10 @@ public class Applicazione {
     }
 
     private void aggiungiOperazione() {
+      //nuova operazione   
+     Operazione op = new Operazione(v.inputData(),v.inputImporto(),v.inputCausale());
+     //registra l'operazione appena inserita
+     c.registraOperazione(op);
 
     }
 
