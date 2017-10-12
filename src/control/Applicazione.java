@@ -23,11 +23,15 @@ public class Applicazione {
     }
 
     public void run() {
+        v.ordSeparatore();
+                
         v.scriviTitolo();
+        v.ordSeparatore();
         int scelta;
         do {
             //presenta il menu
             v.presentaMenu();
+            v.ordSeparatore();
             //input scelta
             scelta = v.inputScelta();
             switch (scelta) {
