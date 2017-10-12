@@ -29,7 +29,7 @@ public class Conto {
         //assegno op all'ultimo posto dell'array nuovo
         dati2[dati2.length - 1] = op;
         //assegno il nuovo array a dati
-        dati = dati2 ;
+        dati = dati2;
         cf.scriviDati(dati);
     }
 
