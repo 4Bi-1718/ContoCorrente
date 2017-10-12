@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.util.Scanner;
 import model.Conto;
 
 /**
@@ -24,10 +25,22 @@ public class TUI {
     }
 
     public int inputScelta() {
-        return 0;
+        Scanner l = new Scanner(System.in);
+        System.out.print("Digitare numero: ");
+        int input=l.nextInt();
+        if(input>2){
+            System.out.println("il numero inserito non è valido,inserire uno dei numeri proposti");
+            System.out.println(" ");
+        }
+        return input;
     }
     
     public void visualizzaSaldo(Conto c){
         System.out.println("Il saldo attuale è: " + c.saldo());
+        ordSeparatore();
     }
+    
+    public void ordSeparatore(){
+        System.out.println("-----------------"); //metodo che stampa separatore
+    }                                            
 }
