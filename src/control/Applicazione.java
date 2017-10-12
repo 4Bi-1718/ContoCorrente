@@ -34,6 +34,8 @@ public class Applicazione {
                 case 1:
                     //mostra la lista
                     listaOperazioni();
+                    //visualizza saldo
+                    v.visualizzaSaldo(c);
                     break;
                 case 2:
                     //aggiungi movimento

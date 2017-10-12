@@ -5,6 +5,8 @@
  */
 package view;
 
+import model.Conto;
+
 /**
  *
  * @author Docente
@@ -21,5 +23,9 @@ public class TUI {
 
     public int inputScelta() {
         return 0;
+    }
+    
+    public void visualizzaSaldo(Conto c){
+        System.out.println("Il saldo attuale è: " + c.saldo());
     }
 }

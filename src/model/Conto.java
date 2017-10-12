@@ -40,7 +40,6 @@ public class Conto {
             //somma algebrica tra il saldo e l'importo dell'elemento nella posizione i di dati[]
             saldo=saldo+dati[i].getImporto();
         }
-        
         return saldo;
     }
 
