@@ -58,14 +58,14 @@ public class Applicazione {
     }
 
     private void listaOperazioni() {
-
+        v.visualizzaLista(c.iteratore());
     }
 
     private void aggiungiOperazione() {
       //nuova operazione   
      Operazione op = new Operazione(v.inputData(),v.inputImporto(),v.inputCausale());
      //registra l'operazione appena inserita
-     c.registraOperazione(op);
+     //c.registraOperazione(op);
 
     }
 
@@ -74,6 +74,6 @@ public class Applicazione {
     }
 
     private void sceltaNonAmmissibile() {
-
+        
     }
 }

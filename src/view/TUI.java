@@ -5,8 +5,10 @@
  */
 package view;
 
+import java.util.Iterator;
 import java.util.Scanner;
 import model.Conto;
+import model.Operazione;
 
 /**
  *
@@ -36,7 +38,7 @@ public class TUI {
     }
     
     public void visualizzaSaldo(Conto c){
-        System.out.println("Il saldo attuale è: " + c.saldo());
+        //System.out.println("Il saldo attuale è: " + c.saldo());
         ordSeparatore();
     }
     
@@ -78,5 +80,15 @@ public class TUI {
         System.out.print("inserisci causale: ");
         causale=lettore.nextLine();
         return causale;
+    }
+    
+    public void visualizzaLista(Iterator<Operazione> it){
+        while(it.hasNext()){
+            Operazione op = it.next();
+            System.out.println("Data: "+op.getData());
+            System.out.println("Importo: "+op.getImporto());
+            System.out.println("Causale: "+op.getCausale());  
+            System.out.println();
+        }    
     }
 }

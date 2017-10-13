@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.util.Iterator;
+import java.util.Vector;
+
 /**
  *
  * @author Docente
@@ -12,35 +15,33 @@ package model;
 public class Conto {
 
     private ContoFile cf;
-    private Operazione[] dati;
+    private Vector<Operazione> dati;
 
     public Conto() {
         cf = new ContoFile();
-        dati = cf.leggiDati();
+        Operazione[] d = cf.leggiDati();
+        dati = new Vector<Operazione>();
+        for (int i = 0; i < d.length; i++) {
+            dati.add(d[i]);
+        }
     }
     
-    public void registraOperazione(Operazione op){
-        //istanza nuovo array +1 rispetto all'esistente
-        Operazione[] dati2 = new Operazione[dati.length + 1];
-        //copio tutti i dati nel nuovo array
-        for (int i = 0; i < dati.length; i++) {
-            dati2[i] = dati[i];
-        }
-        //assegno op all'ultimo posto dell'array nuovo
-        dati2[dati2.length - 1] = op;
-        //assegno il nuovo array a dati
-        dati = dati2;
+    public Iterator iteratore(){
+        return dati.iterator();
+    }
+    /*
+    public void registraOperazione(Operazione op) {
+        dati.add(op);
         cf.scriviDati(dati);
-        }
-    
-    public double saldo(){
-        double saldo=0;
-        
+    }
+
+    public double saldo() {
+        double saldo = 0;
         for (int i = 0; i < dati.length; i++) {
             //somma algebrica tra il saldo e l'importo dell'elemento nella posizione i di dati[]
-            saldo=saldo+dati[i].getImporto();
+            saldo = saldo + dati[i].getImporto();
         }
         return saldo;
     }
-
+    */
 }
