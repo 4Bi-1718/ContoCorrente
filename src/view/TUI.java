@@ -46,41 +46,56 @@ public class TUI {
         System.out.println("-----------------"); //metodo che stampa separatore
     }
     
-    /**
-     * Metodo per l'inserimento e la restituzione della data
-     * @return data
-     */
-    public String inputData(){
-        Scanner lettore=new Scanner(System.in);
-        String data;
-        System.out.print("inserisci la data: (GG/MM/AAAA) ");
-        data=lettore.nextLine();        
-        return data;
-    }
+//    /**
+//     * Metodo per l'inserimento e la restituzione della data
+//     * @return data
+//     */
+//    public String inputData(){
+//        Scanner lettore=new Scanner(System.in);
+//        String data;
+//        System.out.print("inserisci la data: (GG/MM/AAAA) ");
+//        data=lettore.nextLine();        
+//        return data;
+//    }
     
-    /**
-     * Metodo per l'inserimento e la restituzione dell'importo
-     * @return importo
-     */
-    public double inputImporto(){
-        Scanner lettore= new Scanner(System.in);
+    public Operazione inputOperazione(){
+        String data;
         double importo;
+        String causale;
+        Scanner lettore = new Scanner(System.in);
+        System.out.print("inserisci la data: (GG/MM/AAAA) ");
+        data=lettore.nextLine();
         System.out.print("inserisci importo: ");
         importo=lettore.nextDouble();
-        return importo;
-    }
-    
-    /**
-     * Metodo per l'inserimento e la restituzione della causale
-     * @return causale
-     */
-    public String inputCausale(){
-        Scanner lettore=new Scanner(System.in);
-        String causale;
         System.out.print("inserisci causale: ");
         causale=lettore.nextLine();
-        return causale;
+        lettore.next();
+        Operazione op= new Operazione(data,importo,causale);
+        return op;
     }
+//    /**
+//     * Metodo per l'inserimento e la restituzione dell'importo
+//     * @return importo
+//     */
+//    public double inputImporto(){
+//        Scanner lettore= new Scanner(System.in);
+//        double importo;
+//        System.out.print("inserisci importo: ");
+//        importo=lettore.nextDouble();
+//        return importo;
+//    }
+    
+//    /**
+//     * Metodo per l'inserimento e la restituzione della causale
+//     * @return causale
+//     */
+//    public String inputCausale(){
+//        Scanner lettore=new Scanner(System.in);
+//        String causale;
+//        System.out.print("inserisci causale: ");
+//        causale=lettore.nextLine();
+//        return causale;
+//    }
     
     public void visualizzaLista(Iterator<Operazione> it){
         while(it.hasNext()){
