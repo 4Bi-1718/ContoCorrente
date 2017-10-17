@@ -58,6 +58,10 @@ public class TUI {
 //        return data;
 //    }
     
+    /**
+     * 
+     * @return 
+     */
     public Operazione inputOperazione(){
         String data;
         double importo;
