@@ -29,12 +29,12 @@ public class Conto {
     public Iterator iteratore(){
         return dati.iterator();
     }
-    /*
+    
     public void registraOperazione(Operazione op) {
         dati.add(op);
-        cf.scriviDati(dati);
+        cf.scriviDati(dati.iterator());
     }
-
+    /*
     public double saldo() {
         double saldo = 0;
         for (int i = 0; i < dati.length; i++) {
