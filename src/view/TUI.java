@@ -29,23 +29,23 @@ public class TUI {
     public int inputScelta() {
         Scanner l = new Scanner(System.in);
         System.out.print("Digitare numero: ");
-        int input=l.nextInt();
-        if(input>2){
+        int input = l.nextInt();
+        if (input > 2) {
             System.out.println("il numero inserito non è valido,inserire uno dei numeri proposti");
             System.out.println(" ");
         }
         return input;
     }
-    
-    public void visualizzaSaldo(Conto c){
+
+    public void visualizzaSaldo(Conto c) {
         //System.out.println("Il saldo attuale è: " + c.saldo());
         ordSeparatore();
     }
-    
-    public void ordSeparatore(){
+
+    public void ordSeparatore() {
         System.out.println("-----------------"); //metodo che stampa separatore
     }
-    
+
 //    /**
 //     * Metodo per l'inserimento e la restituzione della data
 //     * @return data
@@ -57,24 +57,23 @@ public class TUI {
 //        data=lettore.nextLine();        
 //        return data;
 //    }
-    
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
-    public Operazione inputOperazione(){
+    public Operazione inputOperazione() {
         String data;
         double importo;
         String causale;
         Scanner lettore = new Scanner(System.in);
         System.out.print("inserisci la data: (GG/MM/AAAA) ");
-        data=lettore.nextLine();
+        data = lettore.nextLine();
         System.out.print("inserisci importo: ");
-        importo=lettore.nextDouble();
+        importo = lettore.nextDouble();
         System.out.print("inserisci causale: ");
-        causale=lettore.nextLine();
+        causale = lettore.nextLine();
         lettore.next();
-        Operazione op= new Operazione(data,importo,causale);
+        Operazione op = new Operazione(data, importo, causale);
         return op;
     }
 //    /**
@@ -88,7 +87,7 @@ public class TUI {
 //        importo=lettore.nextDouble();
 //        return importo;
 //    }
-    
+
 //    /**
 //     * Metodo per l'inserimento e la restituzione della causale
 //     * @return causale
@@ -100,14 +99,13 @@ public class TUI {
 //        causale=lettore.nextLine();
 //        return causale;
 //    }
-    
-    public void visualizzaLista(Iterator<Operazione> it){
-        while(it.hasNext()){
+    public void visualizzaLista(Iterator<Operazione> it) {
+        while (it.hasNext()) {
             Operazione op = it.next();
-            System.out.println("Data: "+op.getData());
-            System.out.println("Importo: "+op.getImporto());
-            System.out.println("Causale: "+op.getCausale());  
+            System.out.println("Data: " + op.getData());
+            System.out.println("Importo: " + op.getImporto());
+            System.out.println("Causale: " + op.getCausale());
             System.out.println();
-        }    
+        }
     }
 }

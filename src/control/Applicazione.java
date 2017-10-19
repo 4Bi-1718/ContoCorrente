@@ -24,7 +24,7 @@ public class Applicazione {
 
     public void run() {
         v.ordSeparatore();
-                
+
         v.scriviTitolo();
         v.ordSeparatore();
         int scelta;
@@ -62,7 +62,7 @@ public class Applicazione {
     }
 
     private void aggiungiOperazione() {
-        Operazione o=v.inputOperazione();
+        Operazione o = v.inputOperazione();
         c.registraOperazione(o);
     }
 
@@ -71,6 +71,6 @@ public class Applicazione {
     }
 
     private void sceltaNonAmmissibile() {
-        
+
     }
 }
