@@ -19,8 +19,7 @@ public class Conto {
 
     public Conto() {
         cf = new ContoFile();
-        Operazione[] d = cf.leggiDati();
-        dati = new Vector<Operazione>();
+        dati = new Vector<Operazione>(cf.leggiDati().size());
     }
     
     public Iterator iteratore(){
