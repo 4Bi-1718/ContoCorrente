@@ -48,7 +48,7 @@ public class ContoFile {
             lettore.useDelimiter(";");
             //System.out.println("Apertura file corretta");
             op = new Vector<Operazione>();
-            while(lettore.hasNext()){
+            while (lettore.hasNext()) {
                 Operazione o = new Operazione(lettore.next(), lettore.nextDouble(), lettore.next());
                 lettore.nextLine();
                 op.add(o);

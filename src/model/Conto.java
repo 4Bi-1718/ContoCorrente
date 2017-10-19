@@ -21,16 +21,16 @@ public class Conto {
         cf = new ContoFile();
         dati = new Vector<Operazione>(cf.leggiDati().size());
     }
-    
-    public Iterator iteratore(){
+
+    public Iterator iteratore() {
         return dati.iterator();
     }
-    
+
     public void registraOperazione(Operazione op) {
         dati.add(op);
         //cf.scriviDati(dati);
     }
-/*
+    /*
     public double saldo() {
         double saldo = 0;
         for (int i = 0; i < dati.length; i++) {
@@ -39,5 +39,5 @@ public class Conto {
         }
         return saldo;
     }
-    */
+     */
 }
