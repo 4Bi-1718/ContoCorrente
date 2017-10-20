@@ -8,6 +8,7 @@ package model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -26,14 +27,16 @@ public class ContoFile {
         f = new File(PATHNAME);
     }
 
-    public void scriviDati(Operazione[] dati) {
+    public void scriviDati(Iterator<Operazione> dati) {
         try {
             PrintWriter scrittore = new PrintWriter(f);
-            for (int i = 0; i < dati.length; i++) {
-                String s = dati[i].getData() + ";" + dati[i].getImporto() + ";" + dati[i].getCausale() + ";";
+            String s="";
+            while(dati.hasNext()){
+                Operazione o=dati.next();
+                s=o.getData()+ ";" + o.getImporto() + ";" + o.getCausale() + ";";
                 s = s.replace('.', ',');
                 scrittore.println(s);
-            }
+            }       
             scrittore.close();
         } catch (FileNotFoundException ex) {
             System.out.println("Errore in apertura del file");

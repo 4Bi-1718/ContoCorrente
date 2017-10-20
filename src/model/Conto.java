@@ -28,7 +28,7 @@ public class Conto {
 
     public void registraOperazione(Operazione op) {
         dati.add(op);
-        //cf.scriviDati(dati);
+        cf.scriviDati(dati.iterator());
     }
 
     public double saldo() {
