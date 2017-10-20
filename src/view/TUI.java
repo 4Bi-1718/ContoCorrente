@@ -70,9 +70,9 @@ public class TUI {
         data = lettore.nextLine();
         System.out.print("inserisci importo: ");
         importo = lettore.nextDouble();
+        lettore.nextLine();
         System.out.print("inserisci causale: ");
         causale = lettore.nextLine();
-        lettore.next();
         Operazione op = new Operazione(data, importo, causale);
         return op;
     }
