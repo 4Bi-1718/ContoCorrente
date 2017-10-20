@@ -30,14 +30,16 @@ public class Conto {
         dati.add(op);
         //cf.scriviDati(dati);
     }
-    /*
+
     public double saldo() {
         double saldo = 0;
-        for (int i = 0; i < dati.length; i++) {
-            //somma algebrica tra il saldo e l'importo dell'elemento nella posizione i di dati[]
-            saldo = saldo + dati[i].getImporto();
+        Iterator<Operazione> it = dati.iterator();
+        Operazione op;
+
+        while (it.hasNext()) {
+            op = it.next();
+            saldo += op.getImporto();
         }
         return saldo;
     }
-     */
 }
