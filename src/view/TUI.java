@@ -38,7 +38,7 @@ public class TUI {
     }
 
     public void visualizzaSaldo(Conto c) {
-        //System.out.println("Il saldo attuale è: " + c.saldo());
+        System.out.println("Il saldo attuale è: " + c.saldo());
         ordSeparatore();
     }
 
