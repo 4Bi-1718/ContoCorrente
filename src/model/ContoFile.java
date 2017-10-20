@@ -8,7 +8,6 @@ package model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
 import java.util.logging.Level;
