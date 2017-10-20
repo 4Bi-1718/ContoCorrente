@@ -100,12 +100,14 @@ public class TUI {
 //        return causale;
 //    }
     public void visualizzaLista(Iterator<Operazione> it) {
+        System.out.println("Data" + '\t' + "        " + "Importo" + '\t' + "     " + "Causale");
+        System.out.println("------------------------------------");
         while (it.hasNext()) {
             Operazione op = it.next();
-            System.out.println("Data: " + op.getData());
-            System.out.println("Importo: " + op.getImporto());
-            System.out.println("Causale: " + op.getCausale());
-            System.out.println();
+            System.out.println(op.getData() + '\t' + op.getImporto() + '\t' + "     " + op.getCausale());
+
         }
+        System.out.println();
     }
+
 }
